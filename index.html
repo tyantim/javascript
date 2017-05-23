@@ -2,7 +2,7 @@
 <html>				<!-- 這是html開頭的tag -->
 <head>				<!-- 這是head開頭的tag -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<!-- 宣告編碼 -->
-<title>這是要教給大家的Javascript程式</title>							<!-- 放在視窗列的文字 -->
+<title>田老師要教給大家的Javascript程式</title>							<!-- 放在視窗列的文字 -->
 
     <!-- CSS Base -->
      <link rel="stylesheet" type='text/css' media='all' href="css/base.css"> 
@@ -16,21 +16,22 @@
 <body>
     <main role="main">
         <article id="webslides" class="vertical">
-<section class="bg-black aligncenter">
+<section class="bg-blue aligncenter">
 <!-- 下面是選項的語法 -->
 <div class="wrap  fadeInUp" id="sec1">
 	<div class="content-left">
-		<input type="radio" name="option" value="跑步" checked>跑步<br>
+		<input type="radio" name="option" value="" checked>跑步<br>
 		<input type="radio" name="option" value="鐵軌">鐵軌<br>
 		<input type="radio" name="option" value="山巔">山巔<br>
+		<input type="radio" name="option" value="456">456<br>
 		<select name="test" class="opts" id="myselect">
-		  <option selected value=1>舒宇宸</option>
-		  <option value=2>劉之中</option>
-		  <option value=3>李昱勳</option>
+		  <option selected value=1>田老師正面</option>
+		  <option value=2>田老師背面</option>
+		  <option value=3>田老師側面</option>
 		</select>
-		名言一:<input id="quote_input1" value="數學建模教育之道無它, 唯數學與榜樣"> <br>
-		名言二:<input id="quote_input2" value="Mathematical Modeling is nothing, but Mathematics and Model!"> <br>
-		名言三:<input id="quote_input3" value="舒大ㄅ土, me"> <br>
+		想田部位:<input id="quote_input1" value="我想田鼻子"> <br>
+		想田幾次:<input id="quote_input2" value="2次"> <br>
+		名字,日期:<input id="quote_input3" value="Apple, 0523留"> <br>
 		<button type="button" id="mybutton" onclick=showopt()>產生名言</button>	<!-- 按了之後要執行showopt() -->
 	</div>
 </div>
@@ -102,11 +103,11 @@ function showopt() {
 	
 	var teacher_no = document.getElementById("myselect").value;
 	if(teacher_no == 1) {
-		document.getElementById("teacher").style = "background-image:url('images/ycshu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/123.png'); z-index:5;";
 	} else if (teacher_no == 2) {
-		document.getElementById("teacher").style = "background-image:url('images/ccliu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/123.png'); z-index:5;";
 	} else if (teacher_no == 3) {
-		document.getElementById("teacher").style = "background-image:url('images/andylee.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/123.png'); z-index:5;";
 	}
 	
 	var y = document.getElementsByName("option");
@@ -117,8 +118,10 @@ function showopt() {
 				document.getElementById("bgimage").style = "background-image:url('images/road-2.jpg');";
 			} else if(i==2) {
 				document.getElementById("bgimage").style = "background-image:url('images/road-3.jpg');";
-			} else {
+			} else if(i==0) {
 				document.getElementById("bgimage").style = "background-image:url('images/road-dawn-mountains-sky.jpeg');";
+			} else {
+				document.getElementById("bgimage").style = "background-image:url('images/123.png');";
 			}
 		}
 	}
